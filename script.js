@@ -19,26 +19,26 @@ if (Response.status==404){
     document.querySelector(".speed").innerHTML=data.wind.speed + "km/h";
 
     if (data.weather[0].main=="Clouds"){
-        weatherimage.src="image/clouds.png";
+        weatherimage.src="clouds.png";
          
     }
     else if( data.weather[0].main=="Clear"){
-        weatherimage.src="image/clear.png";
+        weatherimage.src="clear.png";
     }
     else if( data.weather[0].main=="Rain"){
-        weatherimage.src="image/rain.png";
+        weatherimage.src="rain.png";
 
     }
     else if (data.weather[0].main=="Snow"){
-        weatherimage.src="image/snow.png";
+        weatherimage.src="snow.png";
     }
     
     else if (data.weather[0].main=="Drizzle"){
-        weatherimage.src="image/drizzle.png";
+        weatherimage.src="drizzle.png";
     }
     
     else if (data.weather[0].main=="Mist"){
-        weatherimage.src="image/mist.png";
+        weatherimage.src="mist.png";
     }
     
     
