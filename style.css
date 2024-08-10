@@ -7,8 +7,7 @@
  }
 
  body {
-   position: fixed;
-   background-image: url(DeWatermark.ai_1721457245358.png);
+   background-image: url(image/DeWatermark.ai_1721457245358.png);
    background-repeat: no-repeat;
 
    height: 100%;
@@ -100,14 +99,10 @@
  #today {
    font-size: 30px;
    margin-top: -50vh;
-   margin-right: -15vw
+   margin-right: 15vw
  }
 
- .date {
-   font-size: 30px;
-   margin-top: -30vh;
-   margin-right: 15vw;
- }
+
 
  .typeofweather {
    font-size: 30px;
@@ -223,20 +218,22 @@
    font-size: 20px;
  }
 
- @media only screen and (max-width: 470px) {
-   .card {
-     width: 80%;
-     margin: 50px auto 0;
-     border-radius: 10px;
-     padding: 20px;
+ @media only screen and (min-width: 360px) and (max-width: 600px) {
+
+   body {
+     width: 100vw;
+     height: 100vh;
+     background-size: cover;
+   }
+
+   li {
+     margin: 12px;
+
    }
 
    .search {
      flex-direction: column;
-
-     display: flex;
-     justify-content: center;
-     align-items: center;
+     margin-left: 12vh;
 
    }
 
@@ -246,31 +243,97 @@
    }
 
    #btn {
-     width: 40%;
-     height: 50px;
+     width: 70%;
+     height: 45px;
+   }
+
+   #btn img {
+     width: 40px;
+     height: 26px;
+   }
+
+   .row img {
+     margin-left: 15vh;
+     width: 24vh;
+     height: 22vh;
+     margin-top: 4vh;
+   }
+
+
+   #time {
+     display: flex;
+     justify-content: left;
+
+     width: 50px;
+   }
+
+   #today {
+     font-size: 20px;
+     margin-left: 7px;
+   }
+
+   .city {
+     font-size: 25px;
+     top: -2vh;
+     position: absolute;
+     left: -6vw;
+   }
+
+   .temp {
+
+     font-size: 25px;
+     margin-top: -12vh;
+     position: absolute;
+     left: 17vw;
+   }
+
+   .feellike {
+     font-size: 20px;
+     width: 37vw;
+     margin-top: 8vw;
+     margin-left: 18vh;
+   }
+
+   .typeofweather {
+     font-size: 25px;
+     margin-left: 23vh;
+     position: relative;
+     top: 5vh;
+   }
+
+   .mintemp {
+     font-size: 20px;
+     margin-top: 25px;
+     margin-left: 2px;
+   }
+
+   .maxtemp {
+     font-size: 20px;
+     display: flex;
+     justify-content: right;
+     margin-top: -26px;
+   }
+   .s2{
+    position: relative;
+
+   }
+   .s3{
+    position: relative;
    }
 
    .img1 {
      height: 40px;
+     margin-left: -6vh;
    }
 
    .img2 {
-     margin-left: 30px;
+     margin-left: 13vh
    }
 
-   .row img {
-     margin-left: 40px;
-     width: 200px;
-     height: 200px;
-   }
-
-   .temp,
-   .city {
-     font-size: 25px;
-   }
 
    .image-show {
      margin: 20px;
+     position: relative;
    }
 
    .image-show .humidity {
@@ -284,11 +347,16 @@
    }
 
    .text1 {
-     margin: 55px 0 0 -40px;
+
+     font-size: 20px;
 
    }
 
    .text2 {
-     margin: 50px 0 0 -50px;
+
+     font-size: 20px;
+     margin-top: 8vh;
+     padding: 10px;
    }
+
  }
