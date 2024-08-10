@@ -8,19 +8,20 @@ setInterval(() => {
     h = date.getHours();
     m = date.getMinutes();
     s = date.getSeconds();
+    
+    let format = h>=12 ? "PM":"AM"
 
-    document.getElementById('timer').innerHTML = h + ':' + m + ':' + s;
+     h = h%12;
+     h=h?h:12;
+
+
+
+    document.getElementById('timer').innerHTML = h + ':' + m + ':' + s +  "" +format;
 
 
 }, 1000)
 
-const date = new Date();
-d = date.getDate();
-month = date.getMonth();
-year = date.getFullYear();
-day = date.getDay();
 
-document.getElementById('fulldate').innerHTML = d + ':' + month + ':' + year;
 
 
 
@@ -63,26 +64,26 @@ async function cheackWeather(city) {
     document.querySelector(".feellike span").innerHTML = Math.round(data.main.feels_like) + "°C"
 
     if (data.weather[0].main == "Clouds") {
-        weatherimage.src = "clouds.png";
+        weatherimage.src = "image/clouds.png";
 
     }
     else if (data.weather[0].main == "Clear") {
-        weatherimage.src = "clear.png";
+        weatherimage.src = "image/clear.png";
     }
     else if (data.weather[0].main == "Rain") {
-        weatherimage.src = "rain.png";
+        weatherimage.src = "image/rain.png";
 
     }
     else if (data.weather[0].main == "Snow") {
-        weatherimage.src = "snow.png";
+        weatherimage.src = "image/snow.png";
     }
 
     else if (data.weather[0].main == "Drizzle") {
-        weatherimage.src = "drizzle.png";
+        weatherimage.src = "image/drizzle.png";
     }
 
     else if (data.weather[0].main == "Mist") {
-        weatherimage.src = "mist.png";
+        weatherimage.src = "image/mist.png";
     }
 
 
